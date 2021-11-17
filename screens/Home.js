@@ -1,3 +1,4 @@
+  
 import React, {useState}  from "react";
 import {StyleSheet, View, Text, Image, TouchableOpacity, ScrollView, FlatList, ImageBackground, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -5,7 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { State, TextInput } from "react-native-gesture-handler";
-// import * as Animatable from "react-native-animatable"
+import * as Animatable from "react-native-animatable"
 
 export default function Home({navigation}) {
   
@@ -56,14 +57,14 @@ export default function Home({navigation}) {
          
          <View style={{height:80, backgroundColor:"#c45653", justifyContent:"center", paddingHorizontal:5,}}>
 
-        {/* <Animatable.View animation="slideInRight" duration={500} style={{height: 50, backgroundColor:"white", flexDirection:"row", padding: 5, alignItems:"center"}}> */}
+        <Animatable.View animation="slideInRight" duration={500} style={{height: 50, backgroundColor:"white", flexDirection:"row", padding: 5, alignItems:"center"}}>
         <AntDesign name="search1" size={24} color="black" />
         <TextInput placeholder="Search"
         style={{fontSize:24, marginLeft:15}}
         >
 
         </TextInput>
-        {/* </Animatable.View> */}
+        </Animatable.View>
 
          
          </View>
@@ -71,45 +72,43 @@ export default function Home({navigation}) {
                     {/* The entire Menu is done here.
                     The lists bellow contains the items which are sold on the app. */}
 
-
-                            {/* First Item collection: cars */}
+  
+{/* First Item collection: CLOTHING */}
             
          <ScrollView style={styles.contentContainer}>
                     {/* <View style={styles.container}>  */}
                 
                             <View style={styles.box}>
-                            <Text style={styles.heads}>cars</Text>
+                            <Text style={styles.heads}>Fashion</Text>
                                 <View style={styles.inner}>
-                                        {/* <View style={{flex: 1, flexDirection:"row", alignItems:"center", marginLeft:100}}>
-                                    <AntDesign  name="hearto" size={24} color="black" />
-                                    </View>  */}
-                                    
-                                      
+                                  
+                                       <Image 
                                        
-                                       <Image  style={{
+                                        style={{
                                             borderTopLeftRadius:30, 
                                             borderBottomLeftRadius:30, 
                                             borderBottomRightRadius:30,
                                            marginTop:18,
                                            borderTopRightRadius:30,
                                     height:"70%",
-                                    width:140,
+                                    width:130,
                                     backgroundColor: "#D7CFCD"
-                                }} source={require("../assets/car.jpg")}>
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
 
                                     </Image>
                                     
                                     <View style={styles.textview}>
                                     <Text style={styles.text}>
-                                      cars for purchase: 
+                                      Tops for Ladies
                                     </Text>
-                                    <Text style={styles.text}>purchase from the best:</Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
                                     
-                                    {/* <CustomRatingBar/> */}
+                                 
                                     <TouchableOpacity 
-                                    // onPress={() => {
-                                    //     navigation.navigate("cloths")
-                                    // }}
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
                                     style={{backgroundColor:'blue',
                                         padding:10,
                                     paddingHorizontal:30,
@@ -129,53 +128,43 @@ export default function Home({navigation}) {
                                     </TouchableOpacity>
                                     </View>
 
-                                   
-
-                                    
-
-                                    {/* <View style={{flexDirection:'column'}}>
-                                    <CustomRatingBar/>
-                                    </View> */}
-                                      {/* <SafeAreaView>
-                                       
-                                        </SafeAreaView> */}
                                 </View>
                                 
                             </View>
+
+  
                             <View style={styles.box}>
-                            <Text style={styles.heads}>cars</Text>
+                          
                                 <View style={styles.inner}>
-                                        {/* <View style={{flex: 1, flexDirection:"row", alignItems:"center", marginLeft:100}}>
-                                    <AntDesign  name="hearto" size={24} color="black" />
-                                    </View>  */}
-                                    
-                                      
+                                  
+                                       <Image 
                                        
-                                       <Image  style={{
+                                        style={{
                                             borderTopLeftRadius:30, 
                                             borderBottomLeftRadius:30, 
                                             borderBottomRightRadius:30,
                                            marginTop:18,
                                            borderTopRightRadius:30,
                                     height:"70%",
-                                    width:140,
+                                    width:130,
                                     backgroundColor: "#D7CFCD"
-                                }} source={require("../assets/car.jpg")}>
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
 
                                     </Image>
                                     
                                     <View style={styles.textview}>
                                     <Text style={styles.text}>
-                                      cars for purchase: 
+                                      Tops for Ladies
                                     </Text>
-                                    <Text style={styles.text}>purchase from the best:</Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
                                     
-                                    {/* <CustomRatingBar/> */}
+                                 
                                     <TouchableOpacity 
-                                    // onPress={() => {
-                                    //     navigation.navigate("cloths")
-                                    // }}
-                                    style={{backgroundColor:'#ebaf0c',
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
                                         padding:10,
                                     paddingHorizontal:30,
                                     flexDirection:'row',
@@ -194,27 +183,398 @@ export default function Home({navigation}) {
                                     </TouchableOpacity>
                                     </View>
 
-                                   
-
-                                    
-
-                                    {/* <View style={{flexDirection:'column'}}>
-                                    <CustomRatingBar/>
-                                    </View> */}
-                                      {/* <SafeAreaView>
-                                       
-                                        </SafeAreaView> */}
                                 </View>
                                 
                             </View>
-                            
-                           
-                           
 
-                          
-                           
+  
+                            <View style={styles.box}>
                             
-                   
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                      
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                            <Text style={styles.heads}>Computers</Text>
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                          
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                            
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                           
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+                            <View style={styles.box}>
+                       
+                                <View style={styles.inner}>
+                                  
+                                       <Image 
+                                       
+                                        style={{
+                                            borderTopLeftRadius:30, 
+                                            borderBottomLeftRadius:30, 
+                                            borderBottomRightRadius:30,
+                                           marginTop:18,
+                                           borderTopRightRadius:30,
+                                    height:"70%",
+                                    width:130,
+                                    backgroundColor: "#D7CFCD"
+                                }} source={require("../assets/couch/cream_couch.jpg")}>
+
+                                    </Image>
+                                    
+                                    <View style={styles.textview}>
+                                    <Text style={styles.text}>
+                                      Tops for Ladies
+                                    </Text>
+                                    <Text style={styles.text}>Different colours in stock</Text>
+                                    <Text style={styles.text}>Different sizes available</Text>
+                                    
+                                 
+                                    <TouchableOpacity 
+                                    onPress={() => {
+                                        navigation.navigate("cloths")
+                                    }}
+                                    style={{backgroundColor:'blue',
+                                        padding:10,
+                                    paddingHorizontal:30,
+                                    flexDirection:'row',
+                                    marginTop:40,
+                                    marginRight:10,
+                                    width:150,
+                                    height:40,
+                                    borderTopRightRadius:30, 
+                                    borderTopLeftRadius:30, 
+                                    borderBottomLeftRadius:30, 
+                                    borderBottomRightRadius:30,
+                                    alignContent:'center'
+                                                }}
+                                    >
+                                                <Text style={{fontSize:16, marginLeft:20}}>Buy</Text>
+                                    </TouchableOpacity>
+                                    </View>
+
+                                </View>
+                                
+                            </View>
+
+  
+
+ 
                 </ScrollView>
            
            
@@ -222,9 +582,7 @@ export default function Home({navigation}) {
 
           <View style={{flex:0.1, backgroundColor:"yellow", justifyContent:"space-between", alignItems:"center", flexDirection:"row"}}>
         
-        <TouchableOpacity 
-        //  onPress={() => {navigation.navigate("Prod")}}
-         >
+        <TouchableOpacity  onPress={() => {navigation.navigate("Prod")}}>
         <Ionicons name="settings" size={24} color="black" style={{marginLeft:12}} /> 
         </TouchableOpacity>
           
@@ -251,43 +609,31 @@ const styles = StyleSheet.create({
  
   inner: {
     flex:1,
-    backgroundColor: '#eee',
-    // alignItems:'flex-start',
-    // justifyContent:'space-between',    
+    backgroundColor: '#edf2ef',
+        
     borderTopRightRadius:30, 
     borderTopLeftRadius:30, 
     borderBottomLeftRadius:30, 
     borderBottomRightRadius:30,
     flexDirection: 'row',
-    // flexWrap: 'wrap',
-    // borderBottomColor:'green',
+ 
     borderColor:'red'
 
-    // alignItems:'stretch',
-    // justifyContent:'space-between'
+  
 },
   
 box: {
     width: '103%',
-    height: '39%',
-    padding: 10,
+    height: '38%',
+    padding: 5,
    borderColor: 'red'
-    // flexDirection:"row"
-    // alignItems:'stretch'
-    
+   
   
     
 },
 
-//   item: {
-//       marginTop:24,
-//       padding:30,
-//       backgroundColor:'pink',
-//       fontSize:24,
-//       flexDirection:"row",
-//       justifyContent:"space-between"
-      
-//   },
+  
+
   contentContainer:{
       width : '100%',
       height : '85%',
@@ -310,7 +656,7 @@ box: {
   customRatingBarStyle:{
     justifyContent:'center',
     flexDirection:'row',
-    // marginTop:30
+    
 
 },
 
@@ -318,8 +664,7 @@ starImgStyle:{
     width:40,
     height:40,
     resizeMode:'cover',
-//    alignItems:'flex-start'
-    // justifyContent:'space-between'
+
     
 },
 
@@ -327,7 +672,7 @@ text:{
     fontSize:20,
     fontWeight:'900',
     fontStyle:'normal',
-    margin:7
+    margin:2
 },
 textview:{
     flexDirection:'column'
